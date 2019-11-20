@@ -44,8 +44,13 @@ table {
 	border-spacing: 0;
 }
 
+* {
+	box-sizing: border-box;
+}
+
 /* ==== HELPER COLORS FOR LAYOUT ==== */
 
+/*
 .main-header {
 	background-color: rgba(255, 248, 53, .3);
 }
@@ -57,3 +62,111 @@ table {
 .post {
 	background-color: rgba(255, 0, 0, .3);
 }
+*/
+
+/* ==== BASE STYLES ==== */
+
+body {
+  font-family: Merriweather, 'Times New Roman', serif;
+  font-size: 1.125rem;
+  line-height: 2rem;
+  color: #333;
+}
+
+h1, h2 {
+  font-family: 'Open Sans', Arial, sans-serif;
+  
+}
+
+h1 {
+  font-size:1.8rem;  
+}
+
+h2 {
+  font-size:1.6rem;  
+  color: #e5127d;
+}
+
+.main-header p {
+	font-size: 1.125rem;
+	letter-spacing: 0.125rem;
+	color: #8c8e9b;
+}
+
+
+
+/* ==== LAYOUT STYLES ==== */
+
+/* Main Header Styles */
+.main-header {
+	text-align: center;
+	padding: 1.25rem;
+	color: #fff;
+	background-color: #42444e;
+}
+
+/* Article Styles */
+.post {
+	width: 95%;
+/*Ha három értéket adsz meg a margónak (margin: 0 auto 1rem;),
+azok a következő sorrendben szabályozzák az egyes oldali margókat: top, right (and left) és bottom.*/
+	margin: 0 auto 1rem;
+	padding: 0.3125rem;
+}
+
+
+/* a kép kitölti a teljes képernyőt szélességben*/
+.picture {
+	width: 100%;
+}
+
+a {
+	color: #e5127d;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #b60e63;
+}
+
+
+/*Blokkszintű elemeknek ad 1rem alsó margót, így az oldalon egy lépés segítségével egységessé válik a vertikális ritmus*/
+h1,h2,h3,h4,h5,h6,hgroup,
+ul,ol,dd,
+p,figure,
+pre,table,fieldset,hr,
+img,
+.main-header, .primary-content {
+    margin-bottom: 1rem;
+}
+
+/* ==== COMPONENT STYLES ==== */
+
+
+/*A következő 3 css beállítás
+a linkek gombokká alakultak, az oldal alján pedig kicsit mutatósabb a középre rendezett link. */
+.button {
+	display: inline-block;
+	border: 1px solid #8c8e9b;
+	color: #8c8e9b;
+	border-radius: 10px;
+	padding-right: 5px;
+	padding-left: 5px;
+	margin: 5px;
+	width: 100px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.button:hover {
+	border: 1px solid #b60e63;
+}
+
+.load {
+	display: block;
+	text-align: center;
+	padding: 0.625rem;
+	font-size: 1.25rem;
+	color: #8c8e9b;
+}
+
+
